@@ -1,109 +1,57 @@
-(function (global, factory) {
-    if (typeof define === "function" && define.amd) {
-        define(['exports', 'react', './FormBuilder.css'], factory);
-    } else if (typeof exports !== "undefined") {
-        factory(exports, require('react'), require('./FormBuilder.css'));
-    } else {
-        var mod = {
-            exports: {}
-        };
-        factory(mod.exports, global.react, global.FormBuilder);
-        global.Field = mod.exports;
-    }
-})(this, function (exports, _react) {
-    'use strict';
+"use strict";
 
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
-    var _react2 = _interopRequireDefault(_react);
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-    function _interopRequireDefault(obj) {
-        return obj && obj.__esModule ? obj : {
-            default: obj
-        };
-    }
-
-    function _classCallCheck(instance, Constructor) {
-        if (!(instance instanceof Constructor)) {
-            throw new TypeError("Cannot call a class as a function");
-        }
-    }
-
-    var _createClass = function () {
-        function defineProperties(target, props) {
-            for (var i = 0; i < props.length; i++) {
-                var descriptor = props[i];
-                descriptor.enumerable = descriptor.enumerable || false;
-                descriptor.configurable = true;
-                if ("value" in descriptor) descriptor.writable = true;
-                Object.defineProperty(target, descriptor.key, descriptor);
-            }
-        }
-
-        return function (Constructor, protoProps, staticProps) {
-            if (protoProps) defineProperties(Constructor.prototype, protoProps);
-            if (staticProps) defineProperties(Constructor, staticProps);
-            return Constructor;
-        };
-    }();
-
-    function _possibleConstructorReturn(self, call) {
-        if (!self) {
-            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        }
-
-        return call && (typeof call === "object" || typeof call === "function") ? call : self;
-    }
-
-    function _inherits(subClass, superClass) {
-        if (typeof superClass !== "function" && superClass !== null) {
-            throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-        }
-
-        subClass.prototype = Object.create(superClass && superClass.prototype, {
-            constructor: {
-                value: subClass,
-                enumerable: false,
-                writable: true,
-                configurable: true
-            }
-        });
-        if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-    }
-
-    var Field = function (_Component) {
-        _inherits(Field, _Component);
-
-        function Field() {
-            _classCallCheck(this, Field);
-
-            return _possibleConstructorReturn(this, (Field.__proto__ || Object.getPrototypeOf(Field)).apply(this, arguments));
-        }
-
-        _createClass(Field, [{
-            key: 'render',
-            value: function render() {
-                return _react2.default.createElement(
-                    'div',
-                    { draggable: 'true', className: 'field fieldToDrag', 'data-type-field': this.props['data-field']['typeInput'], title: 'Drag element to add it' },
-                    _react2.default.createElement(
-                        'span',
-                        null,
-                        this.props['data-field']['classIcon'] ? _react2.default.createElement(
-                            'i',
-                            { className: 'material-icons' },
-                            this.props['data-field']['classIcon']
-                        ) : "",
-                        this.props['data-field']['label']
-                    )
-                );
-            }
-        }]);
-
-        return Field;
-    }(_react.Component);
-
-    exports.default = Field;
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
+exports.default = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+require("./FormBuilder.css");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Field = /*#__PURE__*/function (_Component) {
+  (0, _inherits2.default)(Field, _Component);
+
+  var _super = _createSuper(Field);
+
+  function Field() {
+    (0, _classCallCheck2.default)(this, Field);
+    return _super.apply(this, arguments);
+  }
+
+  (0, _createClass2.default)(Field, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        draggable: "true",
+        className: "field fieldToDrag",
+        "data-type-field": this.props['data-field']['typeInput'],
+        title: "Drag element to add it"
+      }, /*#__PURE__*/_react.default.createElement("span", null, this.props['data-field']['classIcon'] ? /*#__PURE__*/_react.default.createElement("i", {
+        className: "material-icons"
+      }, this.props['data-field']['classIcon']) : "", this.props['data-field']['label']));
+    }
+  }]);
+  return Field;
+}(_react.Component);
+
+var _default = Field;
+exports.default = _default;
