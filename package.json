@@ -52,5 +52,15 @@
     "dependencies": {
         "@babel/polyfill": "^7.10.1",
         "babel-runtime": "^6.6.1"
+    },
+    "overrides": {
+        "debug@2": "^2.6.9",
+        "decode-uri-component": "^0.5.0",
+        "form-data": "^2.5.6",
+        "growl": "^1.10.0",
+        "minimist@0": "^0.2.4",
+        "qs": "^6.16.0",
+        "shelljs": "^0.8.5",
+        "argparse@1": "2.0.1"
     }
 }
