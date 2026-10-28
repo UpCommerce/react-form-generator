@@ -30,20 +30,12 @@
         "@babel/core": "^7.10.2",
         "@babel/preset-env": "^7.10.2",
         "@babel/preset-react": "^7.10.1",
+        "@babel/plugin-transform-class-properties": "^7.27.1",
+        "@babel/plugin-transform-object-rest-spread": "^7.28.0",
         "@babel/runtime": "^7.10.2",
         "@babel/plugin-transform-runtime": "^7.10.2",
-        "chai": "^3.5.0",
-        "enzyme": "^2.2.0",
-        "eslint": "^2.7.0",
-        "eslint-plugin-babel": "^3.1.0",
-        "eslint-plugin-react": "^4.2.3",
-        "jsdom": "^8.1.0",
-        "mocha": "^2.4.5",
-        "nodemon": "^1.9.1",
         "react": "^15.0.0",
-        "react-addons-test-utils": "^15.0.0",
-        "react-dom": "^15.0.0",
-        "sinon": "^1.17.3"
+        "react-dom": "^15.0.0"
     },
     "peerDependencies": {
         "react": "~0.14.8 || ^15.0.0",
@@ -54,12 +46,6 @@
         "babel-runtime": "^6.6.1"
     },
     "overrides": {
-        "debug@2": "^2.6.9",
-        "decode-uri-component": "^0.5.0",
-        "form-data": "^2.5.6",
-        "growl": "^1.10.0",
-        "minimist@0": "^0.2.4",
-        "qs": "^6.16.0",
-        "shelljs": "^0.8.5"
+        "node-fetch@1": "^2.6.7"
     }
 }
